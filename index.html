@@ -6,6 +6,7 @@
         * {
             font-family: Helvetica;
         }
+
         button {
             color: white;
             border-radius: 5px;
@@ -44,9 +45,10 @@
             position: relative;
         }
 
-        .up-div{
+        .up-div {
             margin-bottom: 5px;
         }
+
         .down-div {
             margin-top: 5px;
         }
@@ -57,60 +59,74 @@
             width: 300px;
             display: none;
         }
-    </style>
-<script>
-    function purpleHandler(){
-        var modal = document.getElementById("modal")
-        modal.innerHTML = "You clicked a button! #866BFF"
-        modal.style.color = "#866BFF"
-        modal.style.display = "block"
-        
-        document.body.style.backgroundColor = '#333';
-        document.body.style.opacity = "75";
-    }
-    function redHandler(){
-        var modal = document.getElementById("modal")
-        modal.innerHTML = "You clicked a button! #FF6B6B"
-        modal.style.color = "#FF6B6B"
-        modal.style.display = "block"
-        
-        document.body.style.backgroundColor = '#333';
-        document.body.style.opacity = "75";
-    }
-    function blueHandler(){
-        var modal = document.getElementById("modal")
-        modal.innerHTML = "You clicked a button! #6BC4FF"
-        modal.style.color = "#6BC4FF"
-        modal.style.display = "block"
-        
-        document.body.style.backgroundColor = '#333';
-        document.body.style.opacity = "75";
-    }
-    function orangeHandler(){
-        var modal = document.getElementById("modal")
-        modal.innerHTML = "You clicked a button! #FFAB6B"
-        modal.style.color = "#FFAB6B"
-        modal.style.display = "block"
-        
-        document.body.style.backgroundColor = '#333';
-        document.body.style.opacity = "75";
-    }
-    
-    function modalHandler(){
-        
-        var modal = document.getElementById("modal")
-        modal.style.display = "none"
-        document.body.style.backgroundColor = 'white';
 
-    }
-</script>
+        .izq {
+            left: 550px;
+        }
+
+        .der {
+            right: 1000px;
+        }
+
+        .gray {
+            width: 400px;
+            height: 200px;
+            background-color: #626262;
+        }
+    </style>
+    <script>
+        function purpleHandler() {
+            var modal = document.getElementById("modal")
+            modal.innerHTML = "You clicked a button! #866BFF"
+            modal.style.color = "#866BFF"
+            modal.style.display = "block"
+
+            document.body.style.backgroundColor = '#333';
+            document.body.style.opacity = "75";
+        }
+        function redHandler() {
+            var modal = document.getElementById("modal")
+            modal.innerHTML = "You clicked a button! #FF6B6B"
+            modal.style.color = "#FF6B6B"
+            modal.style.display = "block"
+
+            document.body.style.backgroundColor = '#333';
+            document.body.style.opacity = "75";
+        }
+        function blueHandler() {
+            var modal = document.getElementById("modal")
+            modal.innerHTML = "You clicked a button! #6BC4FF"
+            modal.style.color = "#6BC4FF"
+            modal.style.display = "block"
+
+            document.body.style.backgroundColor = '#333';
+            document.body.style.opacity = "75";
+        }
+        function orangeHandler() {
+            var modal = document.getElementById("modal")
+            modal.innerHTML = "You clicked a button! #FFAB6B"
+            modal.style.color = "#FFAB6B"
+            modal.style.display = "block"
+
+            document.body.style.backgroundColor = '#333';
+            document.body.style.opacity = "75";
+        }
+
+        function modalHandler() {
+
+            var modal = document.getElementById("modal")
+            modal.style.display = "none"
+            document.body.style.backgroundColor = 'white';
+
+        }
+    </script>
 
 
 </head>
 
 <body>
     <div id="main-div" class="container">
-        <div class="center">
+        <div class="center izq">
             <div class="up-div">
                 <button id="purple" class="" onclick="purpleHandler()">Open Modal</button>
                 <button id="red" class="" onclick="redHandler()">Open Modal</button>
@@ -121,11 +137,14 @@
             </div>
         </div>
 
-        <div id="modal" class="center" onclick="modalHandler()">
-
+        <div class="center der">
+            <button class="gray">Big Button</button>
         </div>
 
-    </div>    
+
+        <div id="modal" class="center" onclick="modalHandler()"></div>
+
+    </div>
 </body>
 
 </html>
