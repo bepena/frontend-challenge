@@ -3,9 +3,11 @@
 
 <head>
     <style>
+        * {
+            font-family: Helvetica;
+        }
         button {
             color: white;
-            font-family: Helvetica;
             border-radius: 5px;
             width: 100px;
             height: 40px;
@@ -48,24 +50,82 @@
         .down-div {
             margin-top: 5px;
         }
+
+        #modal {
+            background-color: white;
+            height: 200px;
+            width: 300px;
+            display: none;
+        }
     </style>
+<script>
+    function purpleHandler(){
+        var modal = document.getElementById("modal")
+        modal.innerHTML = "You clicked a button! #866BFF"
+        modal.style.color = "#866BFF"
+        modal.style.display = "block"
+        
+        document.body.style.backgroundColor = '#333';
+        document.body.style.opacity = "75";
+    }
+    function redHandler(){
+        var modal = document.getElementById("modal")
+        modal.innerHTML = "You clicked a button! #FF6B6B"
+        modal.style.color = "#FF6B6B"
+        modal.style.display = "block"
+        
+        document.body.style.backgroundColor = '#333';
+        document.body.style.opacity = "75";
+    }
+    function blueHandler(){
+        var modal = document.getElementById("modal")
+        modal.innerHTML = "You clicked a button! #6BC4FF"
+        modal.style.color = "#6BC4FF"
+        modal.style.display = "block"
+        
+        document.body.style.backgroundColor = '#333';
+        document.body.style.opacity = "75";
+    }
+    function orangeHandler(){
+        var modal = document.getElementById("modal")
+        modal.innerHTML = "You clicked a button! #FFAB6B"
+        modal.style.color = "#FFAB6B"
+        modal.style.display = "block"
+        
+        document.body.style.backgroundColor = '#333';
+        document.body.style.opacity = "75";
+    }
+    
+    function modalHandler(){
+        
+        var modal = document.getElementById("modal")
+        modal.style.display = "none"
+        document.body.style.backgroundColor = 'white';
+
+    }
+</script>
+
 
 </head>
 
 <body>
-    <div class="container">
+    <div id="main-div" class="container">
         <div class="center">
             <div class="up-div">
-                <button id="purple" class="">Open Modal</button>
-                <button id="red" class="">Open Modal</button>
+                <button id="purple" class="" onclick="purpleHandler()">Open Modal</button>
+                <button id="red" class="" onclick="redHandler()">Open Modal</button>
             </div>
             <div class="down-div">
-                <button id="blue" class="">Open Modal</button>
-                <button id="orange" class="">Open Modal</button>
-
+                <button id="blue" class="" onclick="blueHandler()">Open Modal</button>
+                <button id="orange" class="" onclick="orangeHandler()">Open Modal</button>
             </div>
         </div>
-    </div>
+
+        <div id="modal" class="center" onclick="modalHandler()">
+
+        </div>
+
+    </div>    
 </body>
 
 </html>
