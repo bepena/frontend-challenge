@@ -15,6 +15,19 @@
             background-color: #866BFF;
         }
 
+        #red {
+            background-color: #FF6B6B;
+
+        }
+
+        #blue {
+            background-color: #6BC4FF;
+        }
+
+        #orange {
+            background-color: #FFAB6B;
+        }
+
         .center {
             margin: 0;
             position: absolute;
@@ -28,13 +41,30 @@
             height: 98vh;
             position: relative;
         }
+
+        .up-div{
+            margin-bottom: 5px;
+        }
+        .down-div {
+            margin-top: 5px;
+        }
     </style>
 
 </head>
 
 <body>
     <div class="container">
-        <button id="purple" class="center">Open Modal</button>
+        <div class="center">
+            <div class="up-div">
+                <button id="purple" class="">Open Modal</button>
+                <button id="red" class="">Open Modal</button>
+            </div>
+            <div class="down-div">
+                <button id="blue" class="">Open Modal</button>
+                <button id="orange" class="">Open Modal</button>
+
+            </div>
+        </div>
     </div>
 </body>
 
